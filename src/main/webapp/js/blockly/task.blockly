@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="" bpmnAble="false" formTarget="src/main/webapp/views/logged/tasks.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="task" ruleName="task" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="523.3" scrolly="-268.3" target="8C60.}F#R[Mn^4$6:%W)"/>
+  <metadata scale="1" scrollx="523.2999999999997" scrolly="-122.99999999999994" target="8C60.}F#R[Mn^4$6:%W)"/>
   <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
     <field customattributes="" name="NAME">OpenModal</field>
     <comment h="80" pinned="false" w="160">task</comment>

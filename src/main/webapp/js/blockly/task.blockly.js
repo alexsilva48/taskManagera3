@@ -10,7 +10,7 @@ window.blockly.js.blockly.Task = window.blockly.js.blockly.Task || {};
  *
  *
  * @author Alex Sandro De Oliveira Silva
- * @since 02/05/2023, 20:41:38
+ * @since 02/05/2023, 22:15:23
  *
  */
 window.blockly.js.blockly.Task.OpenModalArgs = [];
@@ -27,7 +27,7 @@ window.blockly.js.blockly.Task.OpenModal = async function() {
  *
  *
  * @author Alex Sandro De Oliveira Silva
- * @since 02/05/2023, 20:41:38
+ * @since 02/05/2023, 22:15:23
  *
  */
 window.blockly.js.blockly.Task.CloseModalArgs = [];
