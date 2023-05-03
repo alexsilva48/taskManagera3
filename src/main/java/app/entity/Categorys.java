@@ -12,15 +12,15 @@ import cronapi.swagger.CronappSwagger;
 
 
 /**
-* Classe que representa a tabela APPLICATION_USER
+* Classe que representa a tabela CATEGORYS
 * @generated
 */
 @javax.persistence.Entity
-@javax.persistence.Table(name = "\"APPLICATION_USER\"")
+@javax.persistence.Table(name = "\"CATEGORYS\"")
 @XmlRootElement
-@CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
-@JsonFilter("app.entity.ApplicationUser")
-public class ApplicationUser implements Serializable {
+@CronappSecurity
+@JsonFilter("app.entity.Categorys")
+public class Categorys implements Serializable {
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -38,26 +38,32 @@ public class ApplicationUser implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="application_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @Column(name = "name", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private Application application;
+        private java.lang.String name;
 
 
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "APPLICATION_USER_USER_ID_USER_ID", foreignKeyDefinition = "FOREIGN KEY (user_id) REFERENCES USER (id) ON DELETE CASCADE"))
+    @Column(name = "icon", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private User user;
+        private byte[] icon;
+
+
+    /**
+    * @generated
+    */
+    @Column(name = "color", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private byte[] color;
 
 
     /**
     * Construtor
     * @generated
     */
-    public ApplicationUser(){
+    public Categorys(){
     }
 
     /**
@@ -74,44 +80,62 @@ public class ApplicationUser implements Serializable {
     * @param id id
     * @generated
     */
-    public ApplicationUser setId(java.lang.String id) {
+    public Categorys setId(java.lang.String id) {
         this.id = id;
         return this;
     }
     /**
-    * Obtém application
-    * return application
+    * Obtém name
+    * return name
     * @generated
     */
-    public Application getApplication() {
-        return this.application;
+    public java.lang.String getName() {
+        return this.name;
     }
 
     /**
-    * Define application
-    * @param application application
+    * Define name
+    * @param name name
     * @generated
     */
-    public ApplicationUser setApplication(Application application) {
-        this.application = application;
+    public Categorys setName(java.lang.String name) {
+        this.name = name;
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém icon
+    * return icon
     * @generated
     */
-    public User getUser() {
-        return this.user;
+    public byte[] getIcon() {
+        return this.icon;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define icon
+    * @param icon icon
     * @generated
     */
-    public ApplicationUser setUser(User user) {
-        this.user = user;
+    public Categorys setIcon(byte[] icon) {
+        this.icon = icon;
+        return this;
+    }
+    /**
+    * Obtém color
+    * return color
+    * @generated
+    */
+    public byte[] getColor() {
+        return this.color;
+    }
+
+    /**
+    * Define color
+    * @param color color
+    * @generated
+    */
+    public Categorys setColor(byte[] color) {
+        this.color = color;
         return this;
     }
 
@@ -122,7 +146,7 @@ public class ApplicationUser implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-ApplicationUser object = (ApplicationUser)obj;
+Categorys object = (Categorys)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }
