@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="taskFonteDados" ruleName="taskFonteDados" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
+  <metadata scale="1" scrollx="490.2999999999994" scrolly="53.00000000000006" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+    <field customattributes="" name="NAME">topSemanal</field>
+    <comment h="80" pinned="false" w="160">taskFonteDados</comment>
+    <value name="RETURN">
+      <block asynccall="false" colour="#7d9137" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}w0Oj0RZ;F[V0g}3g:#m" multilayer="false" namespace="cronapi.dateTime.Operations.updateNewDate" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAlterar%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20alterar%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20:%20Data%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Atributo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Valor%20:%20Inteiro%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.dateTime.Operations.updateNewDate%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+        <mutation name="{{cronapi.dateTime.Operations.updateNewDate}}" return-raw-type="cronapi.Var">
+          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Data"/>
+          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Atributo"/>
+          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.LONG" name="Valor"/>
+        </mutation>
+        <value name="ARG0">
+          <block asynccall="false" colour="#7d9137" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".#M,J_^ndqgmwL~jV]}/" multilayer="false" namespace="cronapi.dateTime.Operations.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.dateTime.Operations.getNow%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.getNow}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block asynccall="false" colour="#7d9137" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dT[1Nx1B:0cQspKR=-Zg" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="year" value="Ano"/>
+              <arg name="month" value="Mês"/>
+              <arg name="day" value="Dia"/>
+              <arg name="hour" value="Hora"/>
+              <arg name="minute" value="Minuto"/>
+              <arg name="second" value="Segundo"/>
+              <arg name="millisecond" value="Millisegundo"/>
+            </mutation>
+            <field customattributes="" name="SELECT">day</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <shadow asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[[+Z[I,^O@q|tRtot2*d" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field customattributes="" name="NUM">0</field>
+          </shadow>
+          <block asynccall="false" colour="#5b6da5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Sp~/;fY%bhinl{^gVOrA" origintype="math_arithmetic" output="true" tooltip="function () { [native code] }" type="math_arithmetic">
+            <mutation items="2"/>
+            <field customattributes="" name="OP1">MINUS</field>
+            <value name="ARG0">
+              <block asynccall="false" colour="#7d9137" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="LXNXfp1)^71AuF[HCIpm" multilayer="false" namespace="cronapi.dateTime.Operations.getDay" origintype="procedures_callreturn" output="true" returntype="ObjectType.LONG" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20dia%20da%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20dia%20da%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20:%20Data%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Inteiro%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.dateTime.Operations.getDay%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.dateTime.Operations.getDay}}" return-raw-type="cronapi.Var">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Data"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#7d9137" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?6tvAv{xUg8#2)24@-L." multilayer="false" namespace="cronapi.dateTime.Operations.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20data%20e%20hora%20atual%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.dateTime.Operations.getNow%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.dateTime.Operations.getNow}}" return-raw-type="cronapi.Var"/>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="L;Ied@}i,72lSy5eQ.x*" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field customattributes="" name="NUM">8</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</blockly>
