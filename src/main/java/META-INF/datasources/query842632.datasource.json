@@ -7,148 +7,16 @@
   "entitySimpleName": "Tasks",
   "entityFullName": "app.entity.Tasks",
   "query": {
-    "isValid": true,
-    "isEmpty": false,
-    "operationType": "object",
+    "isEmpty": true,
+    "isRawSql": true,
     "isNativeQuery": false,
     "namespace": "app",
-    "type": "select",
-    "rulesEntity": [
-      {
-        "entity": "Tasks",
-        "namespace": "app.entity.Tasks",
-        "dataSourceOptions": {
-          "id": "app.Tasks",
-          "customId": "Tasks",
-          "customQueryName": "app.Tasks",
-          "paramValues": [],
-          "entityFullName": "app.entity.Tasks",
-          "schemaFields": [
-            {
-              "name": "id",
-              "type": "String",
-              "nullable": false,
-              "key": false
-            },
-            {
-              "name": "title",
-              "type": "String",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "description",
-              "type": "String",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "due_date",
-              "type": "DateTime",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "completed",
-              "type": "Boolean",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "created_at",
-              "type": "DateTime",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "updated_at",
-              "type": "DateTime",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "user",
-              "type": "String",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "categorys",
-              "type": "String",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "_objectKey",
-              "type": "String",
-              "nullable": false,
-              "key": true
-            },
-            {
-              "name": "user_name",
-              "type": "String",
-              "nullable": true,
-              "key": false
-            },
-            {
-              "name": "categorys_name",
-              "type": "String",
-              "nullable": true,
-              "key": false
-            }
-          ],
-          "type": "entity",
-          "hasError": false,
-          "customName": "Tasks",
-          "fullName": "app.entity.Tasks",
-          "labelName": "app.entity.Tasks (Tasks)"
-        },
-        "alias": "t"
-      }
-    ],
-    "rulesSelect": [
-      {
-        "func": "get",
-        "field": "t",
-        "type": "string"
-      }
-    ],
-    "rulesGroupBy": [],
-    "rulesHaving": [],
-    "rulesOrderBy": [
-      {
-        "func": "get",
-        "field": "t.created_at",
-        "order": "asc"
-      }
-    ],
-    "rules": {
-      "condition": "AND",
-      "rules": [
-        {
-          "id": "t.created_at",
-          "field": "t.created_at",
-          "type": "date",
-          "input": "text",
-          "operator": "less_or_equal",
-          "value": ":created_at",
-          "valueIsField": false
-        }
-      ],
-      "not": false,
-      "valid": true
-    },
-    "isRawSql": false,
+    "sqlContent": "select \n\tt \nfrom \n\tTasks t\nwhere \n\tEXTRACT(YEAR FROM t.created_at) \u003d EXTRACT(YEAR FROM CURRENT_DATE)   \nand EXTRACT(MONTH FROM t.created_at) \u003d EXTRACT(MONTH FROM CURRENT_DATE)   \nand\tEXTRACT(DAY FROM t.created_at) \u003d EXTRACT(DAY FROM CURRENT_DATE)   \norder by \n\tt.created_at asc",
     "multiTenant": false,
     "paginatorAutomatic": false,
     "pagination": false
   },
-  "queryParamsValues": [
-    {
-      "fieldName": "created_at",
-      "fieldValue": "now"
-    }
-  ],
+  "queryParamsValues": [],
   "verbs": {
     "GET": true,
     "GETAuthorities": null,
